@@ -10,3 +10,7 @@ function makeGrid(rows, columns) {
 }
 
 makeGrid(16, 16);
+
+container.addEventListener("mouseover", (event) => {
+    event.target.style.backgroundColor = "purple";
+})

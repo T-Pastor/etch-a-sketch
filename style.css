@@ -1,11 +1,10 @@
-.container {
+#container {
     display: flex;
     flex-wrap: wrap;
+    gap: 0px;
 }
 
 .item {
-    flex: 1 0 calc(100 - (4 * box-width-percent));
-    margin: 5px;
-    height: 100px;
-    background-color: blue;
+    flex: 1 0 calc(100% / 16);
+    height: 75px;
 }
