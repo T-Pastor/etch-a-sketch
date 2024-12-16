@@ -26,6 +26,7 @@ makeGrid(16, 16)
 
 container.addEventListener("mouseover", (event) => {
     event.target.style.backgroundColor = randomColor();
+    event.target.style.opacity = +event.target.style.opacity + 0.1;
 })
 
 function clearGrid() {
