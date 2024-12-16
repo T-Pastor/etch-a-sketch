@@ -1,16 +1,17 @@
 const container = document.getElementById("container");
 const button = document.getElementById("reset");
-const screenWidth = document.documentElement.clientWidth;
-
+const screenWidth = document.documentElement.clientWidth; //for proper pixel sizing
 
 function makeGrid(rows, columns) {
     const boxSize = screenWidth / columns;
     container.style.width = screenWidth + "px";
     container.style.height = boxSize + "px";
 
-    for(let i = 0; i < rows; i++) {
+    //creates rows
+    for(let i = 0; i < rows; i++) { 
         let row = document.createElement("div");
 
+        //creates each individual column within the rows
         for(let j = 0; j < columns; j++) {
             const pixel = document.createElement("div");
             pixel.id = "pixel";
@@ -25,8 +26,8 @@ function makeGrid(rows, columns) {
 makeGrid(16, 16)
 
 container.addEventListener("mouseover", (event) => {
-    event.target.style.backgroundColor = randomColor();
-    event.target.style.opacity = +event.target.style.opacity + 0.1;
+    event.target.style.backgroundColor = randomColor(); //changes pixel to random color
+    event.target.style.opacity = +event.target.style.opacity + 0.1; //increases pixel opacity with each mouseover
 })
 
 function clearGrid() {
@@ -75,6 +76,7 @@ function validateEntry (input) {
 function randomColor() {
     let color = "#";
 
+    //creates random hex color by calculating random digit and converting to hex
     for (let i = 0; i < 6; i++) {
         color += Math.floor(Math.random() * 16).toString(16);
     }
