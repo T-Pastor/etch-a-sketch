@@ -25,7 +25,7 @@ function makeGrid(rows, columns) {
 makeGrid(16, 16)
 
 container.addEventListener("mouseover", (event) => {
-    event.target.style.backgroundColor = "purple";
+    event.target.style.backgroundColor = randomColor();
 })
 
 function clearGrid() {
@@ -69,4 +69,13 @@ function validateEntry (input) {
     } else {
         return true;
     }
+}
+
+function randomColor() {
+    let color = "#";
+
+    for (let i = 0; i < 6; i++) {
+        color += Math.floor(Math.random() * 16).toString(16);
+    }
+    return color;
 }
