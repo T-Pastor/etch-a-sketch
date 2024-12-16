@@ -1,10 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 #container {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
+    align-content: flex-start;
     gap: 0px;
 }
 
-.item {
-    flex: 1 0 calc(100% / 16);
-    height: 75px;
+button {
+    padding: 20px 35px;
+    color: teal;
+    font-size: 30px;
+    background-color: black;
+    border: solid 5px teal;
+    border-radius: 5px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
 }
